@@ -1,2 +1,5 @@
-protocol,description,payload_bytes_mean,cpu_ms_mean,cpu_ms_sd,cpu_ms_median,cpu_ms_p95,cpu_ms_95ci_low_normal_approx,cpu_ms_95ci_high_normal_approx,wall_ms_mean,wall_ms_sd,n,accepted_n,accepted_rate,alice_gate_pass_n,bob_gate_pass_n,setup_cpu_ms_once,setup_wall_ms_once
-Proposed RSSI-gated ML-KEM-768 protocol,"Proposed TK12 ML-KEM-768 reciprocal static-KEM, transcript-HMAC, and two-sided RSSI-gate profile; in-process simulation without radio transmission.",4031.572,0.151781811,0.026838141615332527,0.141236,0.186453,0.1501183657488562,0.15344525625114377,0.150674009,0.025373814280238733,1000,1000,1,1000,1000,0.063109,0.063112
+scenario,protocol,application_frame_bytes_mean,alice_gate_pass_n,bob_gate_pass_n,accepted_n,accepted_rate,n,mean_ms,sd_ms,ci95_low_ms,ci95_high_ms,median_ms,p95_ms,min_ms,max_ms
+Localhost_Unshaped,Proposed_RSSI_Gated_MLKEM768,4045.84,200,200,200,1.0,200,0.6737,0.1453,0.6535,0.6938,0.6237,0.8879,0.5692,1.5632
+LAN_100Mbps_2msRTT,Proposed_RSSI_Gated_MLKEM768,4045.84,200,200,200,1.0,200,8.8527,0.5646,8.7745,8.931,8.8086,9.8713,7.8267,10.6819
+WAN_10Mbps_40msRTT,Proposed_RSSI_Gated_MLKEM768,4045.84,200,200,200,1.0,200,134.4188,6.0724,133.5772,135.2604,134.1567,144.4555,118.8942,158.2018
+Constrained_256kbps_300msRTT,Proposed_RSSI_Gated_MLKEM768,4045.84,200,200,200,1.0,200,1084.6938,31.5828,1080.3167,1089.071,1084.1137,1140.697,1010.7734,1161.7161
