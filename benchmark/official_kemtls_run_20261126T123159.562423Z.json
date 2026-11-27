@@ -1,0 +1,21 @@
+{
+  "experiment": "Official thomwiggers/kemtls-experiment measurement harness",
+  "started_at_utc": "2026-11-26T12:31:59.562423+00:00",
+  "elapsed_seconds_for_entire_upstream_run": 0.22781620299997485,
+  "repository": "/home/ptkkhiem/kemtls-experiment",
+  "repository_commit": "880f4a1b7756bd2147238db5db4d29a0ee51730f",
+  "repository_branch": "thesis",
+  "working_tree_changes": [],
+  "entrypoint": "measuring/scripts/experiment.py",
+  "entrypoint_sha256": "f7c27394df8c0bf97e7c6a34ee9df4a0bd7dd23dcd1f2b3ceb30e5259783ef11",
+  "command": [
+    "/home/ptkkhiem/pqc_env/bin/python3",
+    "scripts/experiment.py"
+  ],
+  "machine_platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "is_wsl": true,
+  "machine_processor": "x86_64",
+  "logical_cpu_count": 8,
+  "python_version": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "return_code": 1
+}

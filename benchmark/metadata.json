@@ -1,0 +1,74 @@
+{
+  "experiment": "Local Python/liboqs cryptographic workload measurement plus network Monte Carlo",
+  "python_version": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "is_wsl": true,
+  "liboqs_python_module": "/home/ptkkhiem/pqc_env/lib/python3.12/site-packages/oqs/__init__.py",
+  "iterations_per_profile": 1000,
+  "warmup_per_profile": 50,
+  "mldsa_cert_overhead_bytes": 6600,
+  "kemtls_cert_overhead_bytes": 2400,
+  "simulation_iterations_per_profile_network": 10000,
+  "seed": 42,
+  "setup_timings": {
+    "ML-KEM-768 + ML-DSA-65 profile": {
+      "cpu_ms": 2.413081,
+      "wall_ms": 2.410541
+    },
+    "Synthetic two-KEM workload (KEM-auth)": {
+      "cpu_ms": 0.404266,
+      "wall_ms": 0.405869
+    }
+  },
+  "network_scenarios": [
+    {
+      "name": "Illustrative LAN",
+      "bandwidth_kbps": 100000.0,
+      "rtt_ms": 2.0,
+      "rtt_multipliers": {
+        "ML-KEM-768 + ML-DSA-65 profile": 1.0,
+        "Synthetic two-KEM workload (KEM-auth)": 1.5
+      },
+      "jitter_mean_ms": 0.2
+    },
+    {
+      "name": "Illustrative WAN",
+      "bandwidth_kbps": 10000.0,
+      "rtt_ms": 40.0,
+      "rtt_multipliers": {
+        "ML-KEM-768 + ML-DSA-65 profile": 1.0,
+        "Synthetic two-KEM workload (KEM-auth)": 1.5
+      },
+      "jitter_mean_ms": 5.0
+    },
+    {
+      "name": "Illustrative constrained link",
+      "bandwidth_kbps": 256.0,
+      "rtt_ms": 300.0,
+      "rtt_multipliers": {
+        "ML-KEM-768 + ML-DSA-65 profile": 1.0,
+        "Synthetic two-KEM workload (KEM-auth)": 1.5
+      },
+      "jitter_mean_ms": 30.0
+    }
+  ],
+  "proposed_rssi_protocol": {
+    "protocol_id": "TK12-MLKEM768-RSSI-1",
+    "implementation_scope": "In-process protocol-profile simulation with ML-KEM-768, canonical JSON transcript, role-separated HMACs, and no radio/network transmission.",
+    "rssi_input_source": "Synthetic CLI values; not measured RSSI.",
+    "alice_baseline_dbm": -35.0,
+    "bob_baseline_dbm": -27.0,
+    "alice_observed_dbm": -35.0,
+    "bob_observed_dbm": -27.0,
+    "tolerance_db": 4.0,
+    "fingerprint_encoding": "SHA-256 of raw liboqs public-key bytes; pinned in-process for this benchmark profile.",
+    "setup_timings": {
+      "cpu_ms": 0.063109,
+      "wall_ms": 0.063112
+    },
+    "outputs": [
+      "proposed_rssi_protocol_samples.csv",
+      "proposed_rssi_protocol_summary.csv"
+    ]
+  }
+}
